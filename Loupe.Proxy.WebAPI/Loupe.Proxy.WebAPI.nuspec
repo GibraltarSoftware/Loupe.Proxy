@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Loupe.Proxy.WebAPI</id>
+    <version>$version$</version>
+    <title>Loupe Proxy for WebAPI</title>
+    <authors>Gibraltar Software</authors>
+    <owners>Gibraltar Software</owners>
+    <copyright>Copyright © 2019-2019 Gibraltar Software, Inc.</copyright>
+    <licenseUrl>https://github.com/GibraltarSoftware/Loupe.Proxy/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/GibraltarSoftware/Loupe.Proxy</projectUrl>
+    <iconUrl>http://www.gibraltarsoftware.com/loupe.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>WebAPI extension that proxies sesion data from Loupe Agents to a Loupe Server</description>
+    <tags>Loupe Logging ASP.NET WebAPI Proxy</tags>
+  </metadata>
+</package>

@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Loupe.Proxy.WebAPI.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
