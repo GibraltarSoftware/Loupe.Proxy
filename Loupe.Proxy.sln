@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loupe.Proxy.WebAPI", "Loupe.Proxy.WebAPI\Loupe.Proxy.WebAPI.csproj", "{840776E8-25D3-4D9A-AE4B-071BE0DF9202}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loupe.Proxy.Demo", "Loupe.Proxy.Demo\Loupe.Proxy.Demo.csproj", "{8DEBF603-90D7-477A-8994-FD22D002F47C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{840776E8-25D3-4D9A-AE4B-071BE0DF9202}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{840776E8-25D3-4D9A-AE4B-071BE0DF9202}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{840776E8-25D3-4D9A-AE4B-071BE0DF9202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DEBF603-90D7-477A-8994-FD22D002F47C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DEBF603-90D7-477A-8994-FD22D002F47C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DEBF603-90D7-477A-8994-FD22D002F47C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DEBF603-90D7-477A-8994-FD22D002F47C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
