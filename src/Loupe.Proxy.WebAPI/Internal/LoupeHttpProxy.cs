@@ -55,7 +55,7 @@ namespace Loupe.Proxy.WebAPI.Internal
                 Log.Warning(LogCategory, "Loupe Proxy is Disabled because Server configuration is incomplete or incorrect",
                     "The Loupe proxy uses the server configuration for the current application to connect" +
                     "to the server. Since that is incomplete or incorrect the proxy will not start.\r\n\r\n{0}",
-                    serverConfig);
+                    ServerConfigurationDescription(serverConfig));
                 return;
             }
 
@@ -73,7 +73,7 @@ namespace Loupe.Proxy.WebAPI.Internal
                 Log.Warning(LogCategory, "Loupe Proxy is Disabled because Server configuration is incomplete or incorrect",
                     "The Loupe proxy uses the server configuration for the current application to connect" +
                     "to the server. Since that is incomplete or incorrect the proxy will not start.\r\n\r\n{0}",
-                    serverConfig);
+                    ServerConfigurationDescription(serverConfig));
             }
 
             //now we can finally create our one true HTTP client.
@@ -82,7 +82,7 @@ namespace Loupe.Proxy.WebAPI.Internal
             //and log that we're initialized.
             Log.Information(LogCategory, "Loupe Proxy is Enabled",
                 "The Loupe proxy has started and will process requests sent to this application.\r\n\r\n{0}",
-                serverConfig);
+                ServerConfigurationDescription(serverConfig));
 
             Enabled = true;
         }
@@ -98,6 +98,46 @@ namespace Loupe.Proxy.WebAPI.Internal
         /// The active proxy configuration (if initialized)
         /// </summary>
         public static ProxyConfiguration Configuration { get; private set; }
+
+
+        public static string ServerConfigurationDescription(ServerConfiguration configuration)
+        {
+            var stringBuilder = new StringBuilder();
+
+            if (configuration.UseGibraltarService)
+            {
+                stringBuilder.AppendLine("Server: Use Loupe Service");
+                stringBuilder.AppendFormat("\tCustomer Name: {0}\r\n", configuration.CustomerName);
+            }
+            else
+            {
+                stringBuilder.AppendLine("Server: Using Loupe Self-Hosted Server");
+
+                stringBuilder.AppendFormat("\tServer DNS Name: {0}\r\n", configuration.Server);
+
+                if (configuration.UseSsl)
+                {
+                    stringBuilder.AppendFormat("\tUse SSL: {0}\r\n", configuration.UseSsl);
+                }
+
+                if (configuration.Port != 0)
+                {
+                    stringBuilder.AppendFormat("\tPort: {0}\r\n", configuration.Port);
+                }
+
+                if (!string.IsNullOrWhiteSpace(configuration.ApplicationBaseDirectory))
+                {
+                    stringBuilder.AppendFormat("\tApplication Base Directory: {0}\r\n", configuration.ApplicationBaseDirectory);
+                }
+
+                if (!string.IsNullOrWhiteSpace(configuration.Repository))
+                {
+                    stringBuilder.AppendFormat("\tRepository: {0}\r\n", configuration.Repository);
+                }
+            }
+
+            return stringBuilder.ToString();
+        }
 
         private static string CalculateBaseAddress(bool useSsl, string hostName, string applicationBaseDirectory,
             ServerConfiguration serverConfig)
