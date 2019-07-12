@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Loupe Proxy for WebAPI")]
-[assembly: AssemblyDescription("WebAPI extension that proxies sesion data from Loupe Agents to a Loupe Server")]
+[assembly: AssemblyDescription("WebAPI extension that proxies session data from Loupe Agents to a Loupe Server")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Gibraltar Software, Inc.")]
 [assembly: AssemblyProduct("Loupe")]

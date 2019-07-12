@@ -11,7 +11,7 @@
     <projectUrl>https://github.com/GibraltarSoftware/Loupe.Proxy</projectUrl>
     <iconUrl>http://www.gibraltarsoftware.com/loupe.ico</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>WebAPI extension that proxies sesion data from Loupe Agents to a Loupe Server</description>
+    <description>WebAPI extension that proxies session data from Loupe Agents to a Loupe Server</description>
     <tags>Loupe Logging ASP.NET WebAPI Proxy</tags>
   </metadata>
 </package>
